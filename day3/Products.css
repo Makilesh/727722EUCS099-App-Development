@@ -1,0 +1,37 @@
+.products {
+    text-align: center;
+    padding: 40px;
+    background-color: #f7f7f7;
+  }
+  
+  .product-categories {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .product-category {
+    text-align: center;
+    border: 1px solid;
+    background: #a7bcb9;
+    width: 28%;
+    padding: 20px;
+    margin-right: 40px;
+    border-radius: 30px;
+  }
+  
+  .product-category h2 {
+    font-size: 28px;
+    color: #2d3f51
+  }
+  
+  .product-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .product-category li {
+    font-size: 20px;
+    color: #2c3e50
+  }
