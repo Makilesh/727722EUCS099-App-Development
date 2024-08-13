@@ -1,0 +1,70 @@
+/* src/styles/ShippingDetails.css */
+
+.shipping-details {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.shipping-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+.shipping-point {
+    position: relative;
+    width: 100px;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+.shipping-point .status-text {
+    margin-bottom: 10px;
+}
+
+.shipping-point::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.shipping-point.active::before {
+    background-color: #4caf50;
+}
+
+.shipping-point:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(50%);
+    width: 100px;
+    height: 2px;
+    background-color: #ddd;
+    transition: background-color 0.3s;
+}
+
+.shipping-point.active + .shipping-point::after {
+    background-color: #4caf50;
+}
+
+.shipping-point:first-child::after {
+    background-color: #4caf50; /* First bar line as green */
+}
+
+.shipping-point.active ~ .shipping-point::after {
+    background-color: #4caf50; /* All following lines as green */
+}
